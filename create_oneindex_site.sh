@@ -14,6 +14,7 @@ fi
 
 mv oneindex/* .
 mkdir -p config cache
+rm -rf oneindex create_oneindex_site.sh .git
 
 user=$(ls -ld . | awk '{print $3}')
 group=$(ls -ld . | awk '{print $4}')
