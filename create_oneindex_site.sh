@@ -14,5 +14,8 @@ fi
 
 mv oneindex/* .
 mkdir -p config cache
-chown www:www config cache * -R
+
+user=$(ls -ld . | awk '{print $3}')
+group=$(ls -ld . | awk '{print $4}')
+chown $user:$group config cache * -R
 echo "oneindex source code is deployed"
